@@ -1,0 +1,16 @@
+void main() {
+  String email = "zahidrafiq2288@gmail.com";
+  String password = "zahid1234";
+
+  if (email == "zahidrafiq2288@gmail.com" && password == "zahid1234") {
+    print("Login is Successful");
+  } else {
+    if (email != "zahidrafiq2288@gmail.com" && password != "zahid1234") {
+      print("Login is Notsuccessful");
+    } else if (email != "zahidrafiq2288@gmail.com") {
+      print("Login is Unsuccessful! Plese Put Correct Email");
+    } else {
+      print("Login is Unsuccessful! Plese Put Correct Password");
+    }
+  }
+}

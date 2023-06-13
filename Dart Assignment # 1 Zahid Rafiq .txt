@@ -1,0 +1,310 @@
+import 'dart:math';
+
+void main() {
+/* Q.1 : Create two integer variables length and breadth and assign values
+         then check if they are square values or rectangle values.
+         ie: if both values are equal then it's square otherwise rectangle. */
+
+  int length = 4;
+  int breadth = 4;
+
+  print("-------1-Length and Breadth-------");
+
+  if (length == breadth) {
+    print("They are Square Values");
+  } else {
+    print("They are Rectangle");
+  }
+
+  print("");
+/*Q.2  : Take two variables and store age then using if/else condition to determine 
+         oldest and youngest among them. */
+
+  var ageZahid = 28;
+  var ageAmeen = 40;
+
+  print("-------2-Age Determine Oldest and Youngest-------");
+
+  if (ageZahid > ageAmeen) {
+    print("Zahid is youngest");
+  } else if (ageZahid < ageAmeen) {
+    print("Ameen is oldest.");
+  } else {
+    print("Zahid and Ameen are same age.");
+  }
+
+  print("");
+/*Q.3: A student will not be allowed to sit in exam if his/her attendance is less than 75%. 
+       Create integer variables and assign value:
+       Number of classes held = 16,
+       Number of classes attended = 10,
+       and print percentage of class attended.
+       Is student is allowed to sit in exam or not?*/
+
+  int classesHeld = 16;
+  int classesAttended = 10;
+  num percentage = (classesAttended * 100) / classesHeld;
+
+  print("-------3-A student Allowed or Not Allowed to sit in exam-------");
+
+  if (percentage >= 75 && percentage <= 100) {
+    print("The Student Percentage : $percentage.");
+    print("The Student is Allowed to Sit in Exam.");
+  } else if (percentage >= 1 && percentage <= 75) {
+    print("The Student Percentage : $percentage.");
+    print("The Student is  Not Allowed to Sit in Exam.");
+  } else {
+    print("Something is else");
+  }
+  print("");
+
+/*Q.4:  Create integer variable assign any year to it and check if a year is leap year or not.
+        If a year is divisible by 4 then it is leap year but if the year is century year like 
+        2000, 1900, 2100 then it must be divisible by 400.
+        i.e: Use % ( modulus ) operator.*/
+
+//  int year = 2000;
+//  int year = 1900;
+//  int year = 2100;
+  int year = 2023;
+
+  print("-------4-Leap Year or Not.-------");
+
+  if (year % 4 == 0 || year % 400 == 0) {
+    print('$year is a leap year.');
+  } else {
+    print('$year is not a leap year.');
+  }
+  print("");
+
+/*Q.5: Write a program to read temperature in centigrade and display a suitable message 
+       according to temperature:
+       You have num variable temperature = 42;
+       Now print the message according to temperature:
+       temp < 0 then Freezing weather
+       temp 0-10 then Very Cold weather
+       temp 10-20 then Cold weather
+       temp 20-30 then Normal in Temp
+       temp 30-40 then Its Hot
+       temp >=40 then Its Very Hot*/
+
+  num temperature = 42;
+
+  print("-------5-Temperature in centigrade-------");
+
+  if (temperature < 0) {
+    print("Freezing Weather");
+  } else if (temperature >= 0 && temperature <= 10) {
+    print("Very Cold Weather");
+  } else if (temperature >= 10 && temperature <= 20) {
+    print("Cold Weather");
+  } else if (temperature >= 20 && temperature <= 30) {
+    print("Normal Weather");
+  } else if (temperature >= 30 && temperature <= 40) {
+    print("Hot Weather");
+  } else if (temperature >= 40) {
+    print("Very Hot Weather");
+  } else {
+    print("Weather Not determine");
+  }
+  print("");
+
+/*Q.6: Write a program to check whether an alphabet is a vowel or consonant.*/
+
+  String alphabet = "U";
+
+  print("-------6-Alphabet is a Vowel or Consonant.-------");
+  if (alphabet == "a") {
+    print("a Alphabet is a Vowel");
+  } else if (alphabet == "i") {
+    print("i Alphabet is a Vowel");
+  } else if (alphabet == "e") {
+    print("e Alphabet is a Vowel");
+  } else if (alphabet == "o") {
+    print("o Alphabet is a Vowel");
+  } else if (alphabet == "u") {
+    print("u Alphabet is a Vowel");
+  } else if (alphabet == "A") {
+    print("A Alphabet is a Vowel");
+  } else if (alphabet == "I") {
+    print("I Alphabet is a Vowel");
+  } else if (alphabet == "E") {
+    print("E Alphabet is a Vowel");
+  } else if (alphabet == "O") {
+    print("O Alphabet is a Vowel");
+  } else if (alphabet == "U") {
+    print("U Alphabet is a Vowel");
+  } else {
+    print("The Alphabet is Consonant");
+  }
+  print("");
+
+/*Q.7: Write a program to calculate and print the Electricity bill of a given customer.
+       Create variable for customer id, name, unit consumed by the user, bill_amount and
+       print the total amount the customer needs to pay. The charge are as follow :
+
+       Unit Charge/unit
+       upto 199    @1.20
+       200 and above but less than 400    @1.50
+       400 and above but less than 600    @1.80
+       600 and above             @2.00;
+
+       Test Data :
+       id: 1001
+       name: James
+       units: 800
+       Expected Output :
+       Customer IDNO :1001
+       Customer Name :James
+       unit Consumed :800
+       Amount Charges @Rs. 2.00 per unit : 1600.00
+       Net Bill Amount : 1600.00*/
+  print("-------7-Electricity bill.-------");
+  int id = 1001;
+  String name = "James";
+  num units = 800;
+  num billAmount1 = units * 1.2;
+  num billAmount2 = units * 1.50;
+  num billAmount3 = units * 1.80;
+  num billAmount4 = units * 2.00;
+
+  print("Customer IDNO : $id");
+  print("Customer Name : $name");
+  print("Unit Consumed : $units");
+  if (units >= 0 && units <= 199) {
+    print("Amount Charges @Rs. 1.2  per unit : $billAmount1.00");
+    print("Net Bill Amount : $billAmount1.00");
+  } else if (units >= 200 && units <= 400) {
+    print("Amount Charges @Rs. 1.50 per unit : $billAmount2.00");
+    print("Net Bill Amount : $billAmount2.00");
+  } else if (units >= 400 && units <= 600) {
+    print("Amount Charges @Rs. 1.80 per unit : $billAmount3.00");
+    print("Net Bill Amount : $billAmount3.00");
+  } else if (units >= 600) {
+    print("Amount Charges @Rs. 2.00 per unit : $billAmount4.00");
+    print("Net Bill Amount : $billAmount4.00");
+  } else {
+    print("Something is Else");
+  }
+  print("");
+/*Q8: Create a marksheet using operators of at least 5 subjects and output should have 
+      Student Name, 
+      Student Roll Number, Class, Percentage, Grade Obtained etc.
+      i.e: Percentage should be rounded upto 2 decimal places only.*/
+
+  int english = 79;
+  int physics = 61;
+  int chemistry = 56;
+  int biology = 45;
+  int math = 60;
+  int totalMarks = 500;
+  num gainedMarks = english + physics + chemistry + biology + math;
+  String studentName = "Muhammad Zahid Rafiq";
+  int rollno = 543821;
+  double percent = (gainedMarks * 100) / totalMarks;
+  print("-------8-Marksheet --------");
+  print("Student Name: $studentName");
+  print("Roll No : $rollno");
+  print("Obtained Marks : $gainedMarks");
+  print("Total Marks : $totalMarks");
+  print("Your percentage : $percent");
+
+  if (percent >= 80 && percent <= 100) {
+    print("Congratulations! You passed. A+");
+  } else if (percent >= 70 && percent <= 79) {
+    print("Congratulations! You passed. A");
+  } else if (percent >= 60 && percent <= 69) {
+    print("Congratulations! You passed. B");
+  } else if (percent >= 50 && percent <= 59) {
+    print("Congratulations! You passed. C");
+  } else if (percent >= 33 && percent <= 49) {
+    print("Congratulations! You passed. E");
+  } else if (percent >= 0 && percent <= 32) {
+    print("Sorry, you did not pass.");
+  } else {
+    print('Sorry, Something is problem');
+  }
+  print("");
+/*Q9: Check if the number is even or odd, If number is even then check if this is divisible by 5
+      or not & if number is odd then check if this is divisible by 7 or not.*/
+
+  int num1 = 7;
+
+  print("-------9-The Number is Even or Odd --------");
+  if (num1 % 2 == 0) {
+    print("$num1 is a even Number.");
+  } else {
+    print("$num1 is a odd Number.");
+  }
+
+  if (num1 % 5 == 0) {
+    print("$num1 this is divisible by 5.");
+  } else {
+    print("$num1 this is Not divisible by 5.");
+  }
+  if (num1 % 7 == 0) {
+    print("$num1 this is divisible by 7.");
+  } else {
+    print("$num1 this is Not divisible by 7.");
+  }
+  print("");
+/*Q10:  Write a program that takes three numbers from the user and prints 
+        the greatest number & lowest number.*/
+
+  int user1 = 97;
+  int user2 = 71;
+  int user3 = 56;
+  num gretestNum1 = user1;
+  num lowestNum1 = user1;
+  num gretestNum2 = user2;
+  num lowestNum2 = user2;
+  num gretestNum3 = user3;
+  num lowestNum3 = user3;
+
+  print("-------10-The Number is Even or Odd --------");
+
+  if (user2 > gretestNum1 && user3 < lowestNum1) {
+    print("$user2 is greatest and $user3 is lowest");
+  } else if (user3 > gretestNum1 && user2 < lowestNum1) {
+    print("$user3 is greatest and $user2 is lowest");
+  } else if (user1 > gretestNum2 && user3 < lowestNum2) {
+    print("$user1 is greatest and $user3 is lowest");
+  } else if (user3 > gretestNum2 && user1 < lowestNum2) {
+    print("$user3 is greatest and $user1 is lowest");
+  } else if (user1 > gretestNum3 && user2 < lowestNum3) {
+    print("$user1 is greatest and $user2 is lowest");
+  } else if (user2 > gretestNum3 && user1 < lowestNum3) {
+    print("$user2 is greatest and $user1 is lowest");
+  } else {
+    print("Please Put The Valid Numbers");
+  }
+  print("");
+/*Q11: Write a program to calculate root of any number.
+       i.e: 
+       √y = y½  */
+
+  print("-------11-The Number is Even or Odd --------");
+
+  int y = 25;
+
+  if (y == y) {
+    print("Square Root Value:");
+    print(sqrt(y));
+  } else {
+    ("Something is else");
+  }
+
+  print("");
+
+/*Q12: Wrie a program to convert 
+       Celsius  to Fahrenheit   .
+       i.e: Temperature in degrees Fahrenheit (°F) = 
+      (Temperature in degrees Celsius (°C) * 9/5) + 32  */
+
+  int celsius = 20;
+  num fahrenheit = (celsius * 9 / 5) + 32;
+  print("-------12-The Number is Even or Odd --------");
+  print("Fahrenheit : $fahrenheit(F)");
+
+
+}
